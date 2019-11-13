@@ -4,11 +4,11 @@ import java.util.Objects;
 
 public class Paciente {
 
-	final String ER_DNI = "[0-9]{8,8}[a-zA-Z]$";
-	final String ER_TELEFONO = "^[9|6][0-9]{8}$";
-	String nombre;
-	String dni;
-	String telefono;
+	private final String ER_DNI = "[0-9]{8,8}[a-zA-Z]$";
+	private final String ER_TELEFONO = "^[9|6][0-9]{8}$";
+	private String nombre;
+	private String dni;
+	private String telefono;
 
 	// Constructor con parámetros
 	public Paciente(String nombre, String dni, String telefono) {

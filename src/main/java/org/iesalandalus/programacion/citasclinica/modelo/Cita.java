@@ -8,7 +8,7 @@ public class Cita {
 
 	static String FORMATO_FECHA_HORA = "dd/MM/yyyy HH:mm";
 	Paciente paciente;
-	LocalDateTime fechaHora;
+	private LocalDateTime fechaHora;
 
 	// Constructor con parámetros
 	public Cita(Paciente paciente, LocalDateTime fechaHora) {

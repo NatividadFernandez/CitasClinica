@@ -1,5 +1,5 @@
 package org.iesalandalus.programacion.citasclinica.modelo;
-/*
+
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.not;
 import static org.hamcrest.CoreMatchers.nullValue;
@@ -10,7 +10,7 @@ import static org.junit.Assert.fail;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 
-import javax.naming.OperationNotSupportedException;
+import javax.naming.OperationNotSupportedException; 
 
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -382,4 +382,3 @@ public class CitasTest {
 	}
 
 }
-*/

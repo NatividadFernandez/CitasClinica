@@ -138,7 +138,7 @@ public class Paciente {
 	// Métodos hasCode y equals
 	@Override
 	public int hashCode() {
-		return Objects.hash(dni, nombre, telefono);
+		return Objects.hash(dni);
 	}
 
 	@Override
@@ -150,8 +150,8 @@ public class Paciente {
 			return false;
 		}
 		Paciente other = (Paciente) obj;
-		return Objects.equals(dni, other.dni) && Objects.equals(nombre, other.nombre)
-				&& Objects.equals(telefono, other.telefono);
+		return Objects.equals(dni, other.dni);/* && Objects.equals(nombre, other.nombre)
+				&& Objects.equals(telefono, other.telefono);*/
 	}
 
 	@Override

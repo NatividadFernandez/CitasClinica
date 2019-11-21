@@ -28,7 +28,7 @@ public class Cita {
 
 	// Getters y Setters
 	public Paciente getPaciente() {
-		return paciente;
+		return new Paciente(paciente);
 	}
 
 	private void setPaciente(Paciente paciente) {
@@ -53,7 +53,7 @@ public class Cita {
 	// Métodos hasCode y equals
 	@Override
 	public int hashCode() {
-		return Objects.hash(fechaHora, paciente);
+		return Objects.hash(fechaHora);
 	}
 
 	@Override
@@ -66,8 +66,9 @@ public class Cita {
 		}
 		Cita other = (Cita) obj;
 		
-		return Objects.equals(fechaHora, other.fechaHora) && Objects.equals(paciente, other.paciente);
+		return Objects.equals(fechaHora, other.fechaHora);
 	}
+	
 
 	@Override
 	public String toString() {

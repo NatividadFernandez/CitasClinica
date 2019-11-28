@@ -100,7 +100,7 @@ public class Citas {
 	public Cita buscar(Cita cita) {
 		int indice = buscarIndice(cita);
 		if (!tamanoSuperado(indice)) {
-			return coleccionCitas[indice] = new Cita(cita);
+			return new Cita(coleccionCitas[indice]);
 		} else {
 			return null;
 		}

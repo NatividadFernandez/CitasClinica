@@ -22,9 +22,9 @@ public class Paciente {
 			throw new NullPointerException("ERROR: No es posible copiar un paciente nulo.");
 		}
 
-		this.nombre = paciente.getNombre();
-		this.dni = paciente.getDni();
-		this.telefono = paciente.getTelefono();
+		setNombre(paciente.nombre);
+		setDni(paciente.dni);
+		setTelefono(paciente.telefono);
 
 	}
 
@@ -35,9 +35,10 @@ public class Paciente {
 	}
 
 	public void setNombre(String nombre) {
-		if (nombre == null || nombre == "" || nombre == "  " || nombre == "   ") {
+		if (nombre == null || nombre.trim().equals("")) {
 			throw new NullPointerException("ERROR: El nombre de un paciente no puede ser nulo o vacío.");
-		}
+		}		
+		
 		this.nombre = formateaNombre(nombre);
 	}
 
@@ -46,7 +47,7 @@ public class Paciente {
 	}
 
 	public void setDni(String dni) {
-		if (dni == null || dni == "" || dni == "  " || dni == "   ") {
+		if (dni == null || dni.trim().equals("")) {
 			throw new NullPointerException("ERROR: El DNI de un paciente no puede ser nulo o vacío.");
 
 		} else if (dni.matches(ER_DNI)) {
@@ -67,7 +68,7 @@ public class Paciente {
 	}
 
 	public void setTelefono(String telefono) {
-		if (telefono == null || telefono == "" || telefono == "  " || telefono == "   ") {
+		if (telefono == null || telefono.trim().equals("")) {
 			throw new NullPointerException("ERROR: El teléfono de un paciente no puede ser nulo o vacío.");
 
 		} else if (telefono.matches(ER_TELEFONO)) {
@@ -122,11 +123,13 @@ public class Paciente {
 		char[] caracteres = { 'T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V',
 				'H', 'L', 'C', 'K', 'E' };
 
+		letraDni.toUpperCase();
 		// Pasamos a char letraDni para poder comprarlo con el array de caracteres
-		char letraDniCaracter = letraDni.charAt(0);
+		char letraDniCaracter = letraDni.toUpperCase().charAt(0);
 
 		// Comprobamos la letra que ha introducido el usuario con la letra que hemos
 		// obtenido nosotros
+		
 		if (caracteres[numero] == letraDniCaracter) {
 			return true;
 		} else {

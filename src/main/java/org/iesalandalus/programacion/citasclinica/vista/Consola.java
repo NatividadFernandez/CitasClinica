@@ -17,7 +17,7 @@ public class Consola {
 
 		System.out.println("*** MENÚ INICIAL ***");
 		System.out.println("1.- Insertar citas " + "\n2.- Buscar citas " + "\n3.- Borrar citas "
-				+ "\n4.- Mostrar citas " + "\n5.- Mostrar citas de una fecha " + "n\0.- Salir");
+				+ "\n4.- Mostrar citas " + "\n5.- Mostrar citas de una fecha " + "\n0.- Salir");
 	}
 
 	public static Opciones elegirOpcion() {

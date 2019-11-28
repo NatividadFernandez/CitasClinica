@@ -108,10 +108,10 @@ public class Citas {
 	}
 
 	private void desplazarUnaPosicionHaciaIzquierda(int indice) {
-		
+
 		for (int i = indice; !tamanoSuperado(i); i++) {
 			coleccionCitas[i] = coleccionCitas[i + 1];
-			
+
 		}
 		tamano--;
 

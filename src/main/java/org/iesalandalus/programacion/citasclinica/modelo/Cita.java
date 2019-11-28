@@ -65,16 +65,13 @@ public class Cita {
 			return false;
 		}
 		Cita other = (Cita) obj;
-		
+
 		return Objects.equals(fechaHora, other.fechaHora);
 	}
-	
 
 	@Override
 	public String toString() {
 		return paciente + ", fechaHora=" + fechaHora.format(DateTimeFormatter.ofPattern(FORMATO_FECHA_HORA));
 	}
-	
-	
 
 }

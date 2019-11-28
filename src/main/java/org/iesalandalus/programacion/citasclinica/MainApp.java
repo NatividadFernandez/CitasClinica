@@ -42,16 +42,15 @@ public class MainApp {
 	private static void buscarCita() {
 
 		LocalDateTime fecha = Consola.leerFechaHora();
-		Paciente paciente = new Paciente("Nombre","77554223V","654789321");		
-		Cita cita = new Cita(paciente,fecha);
+		Paciente paciente = new Paciente("Nombre", "77554223V", "654789321");
+		Cita cita = new Cita(paciente, fecha);
 		try {
-			
-			if(( cita = citasClinica.buscar(cita)) == null) {
-				System.out.println("No hay citas para esa fecha.");				
+
+			if ((cita = citasClinica.buscar(cita)) == null) {
+				System.out.println("No hay citas para esa fecha.");
 			} else {
-				System.out.println(cita);				
-			}		
-		
+				System.out.println(cita);
+			}
 
 		} catch (NullPointerException | IllegalArgumentException ni) {
 			System.out.println(ni.getMessage());
@@ -60,8 +59,8 @@ public class MainApp {
 
 	private static void borrarCita() {
 		LocalDateTime fecha = Consola.leerFechaHora();
-		Paciente paciente = new Paciente("Nombre","77554223V","654789321");		
-		Cita cita = new Cita(paciente,fecha);
+		Paciente paciente = new Paciente("Nombre", "77554223V", "654789321");
+		Cita cita = new Cita(paciente, fecha);
 		try {
 			citasClinica.borrar(cita);
 			System.out.println("La cita ha sido borrada correctamente");
@@ -121,7 +120,7 @@ public class MainApp {
 
 		case INSERTAR_CITA:
 			System.out.println("**** INSERTAR CITA ****");
-			insertarCita();			
+			insertarCita();
 			System.out.println(" ");
 			break;
 		case BUSCAR_CITA:

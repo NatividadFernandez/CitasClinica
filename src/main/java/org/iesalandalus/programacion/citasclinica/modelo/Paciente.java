@@ -37,8 +37,8 @@ public class Paciente {
 	public void setNombre(String nombre) {
 		if (nombre == null || nombre.trim().equals("")) {
 			throw new NullPointerException("ERROR: El nombre de un paciente no puede ser nulo o vacío.");
-		}		
-		
+		}
+
 		this.nombre = formateaNombre(nombre);
 	}
 
@@ -129,7 +129,7 @@ public class Paciente {
 
 		// Comprobamos la letra que ha introducido el usuario con la letra que hemos
 		// obtenido nosotros
-		
+
 		if (caracteres[numero] == letraDniCaracter) {
 			return true;
 		} else {
@@ -153,28 +153,30 @@ public class Paciente {
 			return false;
 		}
 		Paciente other = (Paciente) obj;
-		return Objects.equals(dni, other.dni);/* && Objects.equals(nombre, other.nombre)
-				&& Objects.equals(telefono, other.telefono);*/
+		return Objects.equals(dni, other.dni);/*
+												 * && Objects.equals(nombre, other.nombre) && Objects.equals(telefono,
+												 * other.telefono);
+												 */
 	}
 
 	@Override
 	public String toString() {
-		return "nombre=" + nombre +" (" + getIniciales() + ")" + ", DNI=" + dni + ", teléfono=" + telefono;
+		return "nombre=" + nombre + " (" + getIniciales() + ")" + ", DNI=" + dni + ", teléfono=" + telefono;
 	}
 
 	private String getIniciales() {
-		
+
 		String inicialesNombre = "";
 		// Vamos dividiendo el nombre conforme se encuentra un espacio
 		String[] nombreCompleto = this.nombre.split(" ");
-		
+
 		// Recorremos el nombre ya dividido
-		for (int i = 0; i < nombreCompleto.length ;i++) {
-		
+		for (int i = 0; i < nombreCompleto.length; i++) {
+
 			// Si no se encuentra un espacio vacio
 			if (!nombreCompleto[i].equals("")) {
 				// Se va almacenando la primera posicion de la cadena dividida
-				inicialesNombre +=nombreCompleto[i].charAt(0);
+				inicialesNombre += nombreCompleto[i].charAt(0);
 			}
 		}
 		return inicialesNombre;
